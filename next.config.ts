@@ -3,6 +3,12 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   allowedDevOrigins: ["10.0.0.147"],
   poweredByHeader: false,
+  experimental: {
+    // (en) and zh each define their own root layout (own <html>/<body>), so
+    // there's no single layout to compose a global 404 from — this renders
+    // a standalone page for URLs that don't match either locale's routes.
+    globalNotFound: true,
+  },
   async redirects() {
     return [
       { source: "/programs-cn", destination: "/zh/programs", permanent: true },
