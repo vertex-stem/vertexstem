@@ -301,7 +301,7 @@ export default function CompetitionPage() {
     <div className="font-body">
       {/* Hero */}
       <section
-        className="relative min-h-[300px] md:min-h-[460px] flex items-end text-white py-12 md:py-16 px-5 md:px-14 bg-center bg-cover bg-no-repeat"
+        className="relative min-h-[300px] md:min-h-[460px] flex items-end text-white py-12 md:py-16 px-5 md:px-14 bg-[center_35%] bg-cover bg-no-repeat"
         style={{
           backgroundImage: `linear-gradient(rgba(29,30,69,0.35),rgba(29,30,69,0.85)), url(${IMAGES.hero})`,
         }}
