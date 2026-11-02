@@ -3,7 +3,7 @@
 
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
-import { Input, Textarea, Select, Checkbox } from "@/components/FormElements";
+import { Input, Textarea, Select } from "@/components/FormElements";
 import { InteractiveForm } from "@/components/InteractiveForm";
 import { CTABand } from "@/components/zh/CTABand";
 import { ORG_ADDRESS, ORG_EMAIL, ORG_PHONE } from "@/lib/orgInfo";
@@ -61,7 +61,6 @@ export default function ContactPage() {
             name="message"
             placeholder="请告诉我们您在寻找什么……"
           />
-          <Checkbox label="向我发送课程动态" name="updates" checked />
           <Button variant="primary">索取信息</Button>
         </InteractiveForm>
 

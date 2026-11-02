@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
-import { Input, Textarea, Select, Checkbox } from "@/components/FormElements";
+import { Input, Textarea, Select } from "@/components/FormElements";
 import { InteractiveForm } from "@/components/InteractiveForm";
 import { CTABand } from "@/components/CTABand";
 import { ORG_ADDRESS, ORG_EMAIL, ORG_PHONE } from "@/lib/orgInfo";
@@ -59,7 +59,6 @@ export default function ContactPage() {
             name="message"
             placeholder="Tell us a bit about what you're looking for..."
           />
-          <Checkbox label="Send me program updates" name="updates" checked />
           <Button variant="primary">Request Info</Button>
         </InteractiveForm>
 

@@ -95,7 +95,6 @@ export async function POST(request: Request) {
   const email = typeof body.email === "string" ? body.email.trim() : "";
   const interest = typeof body.interest === "string" ? body.interest.trim() : "";
   const message = typeof body.message === "string" ? body.message.trim() : "";
-  const updates = body.updates === "on";
 
   if (!name || !EMAIL_RE.test(email)) {
     return NextResponse.json(
@@ -135,7 +134,6 @@ export async function POST(request: Request) {
         `Email: ${email}`,
         `Location: ${cf?.city ?? "?"}, ${cf?.region ?? "?"}, ${cf?.country ?? "?"} (IP: ${ip})`,
         interest && `Interested in: ${interest}`,
-        `Wants program updates: ${updates ? "Yes" : "No"}`,
         "",
         message || "(No message provided)",
       ]
